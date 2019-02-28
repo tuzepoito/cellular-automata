@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Cellular automata</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel="stylesheet" href="style.css">
+<script src="cellular.js"></script>
+</head>
+
+<body>
+
+<h1>1-dimension Cellular Automata</h1>
+
+<h2>Neighborhood Rules</h2>
+<h3>(click on the buttons to change the output)</h3>
+
+<table>
+  <tr class="neighbors">
+    <td>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    </td>
+    <td>
+    <div class="black"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    </td>
+    <td>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    </td>
+    <td>
+    <div class="black"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    </td>
+    <td>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="black"></div>
+    </td>
+    <td>
+    <div class="white"></div>
+    <div class="black"></div>
+    <div class="white"></div>
+    </td>
+    <td>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="black"></div>
+    </td>
+    <td>
+    <div class="white"></div>
+    <div class="white"></div>
+    <div class="white"></div>
+    </td>
+  </tr>
+  <tr id="controls">
+  </tr>
+</table>
+
+<p><button id="reset-simple">Simple I.C.</button> <button id="reset-random">Random I.C.</button> <input id="wrap" name="wrap" type="checkbox" checked><label for="wrap">Wrap</label></p>
+
+<canvas id="canvas">
+  <p>Your browser does not support the &lt;canvas&gt; element.</p>
+</canvas>
+
+<p id="presentation">
+  This is a JavaScript implementation of a <a href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular
+  automaton</a>, a type of algorithm where "cells" change state according to given rules.
+  In particular, this example is a two-state, one-dimensional automaton.<br />
+  It has been called the <a href="http://mathworld.wolfram.com/ElementaryCellularAutomaton.html">Elementary Cellular
+  Automaton</a> by <a href="https://en.wikipedia.org/wiki/Stephen_Wolfram">Stephen Wolfram</a>, who studied this
+  type of automata.<br />
+  In this program, we consider a one-dimensional space of cells that can only have one of two states - here, "black"
+  or "white". Each automaton is defined by a set of "rules" which specify, for each cell, the next state of the cell,
+  depending on its own current state and that of its two neighbours.<br />
+  Despite the apparent simplicity of the algorithm, some rules can provide interisting results. Notably,
+  <a href="https://en.wikipedia.org/wiki/Rule_110">Rule 110</a> has been proved to have the property of
+  <a href="http://mathworld.wolfram.com/UniversalCellularAutomaton.html">universality</a>.<br />
+  On this page, you may run a cellular automaton, defining the neighboorhood rules and whether to use a simple initial
+  condition (I.C.) of only one black pixel, or a random I.C.
+</p>
+
+<div class="rules">
+<p>Some rules:</p>
+<h3>(Note: most rules produce more impressive results with "Simple I.C.")</h3>
+<h2>Class 1 (Uniform)</h2>
+<ul>
+  <li><a href="#254">Rule 254</a>: Uniform black triangle</li>
+</ul>
+
+<h2>Class 2 (Pattern)</h2>
+<ul>
+  <li><a href="#50">Rule 50</a>: Checkerboard</li>
+  <li>Rules <a href="#57">57</a> and <a href="#99">99</a>: "Pyramid"</li>
+  <li>Rules <a href="#62">62</a> and <a href="#118">118</a></li>
+  <li><a href="#73">Rule 73</a></li>
+  <li>Rules <a href="#190">190</a> and <a href="#246">246</a>: Diagonal lines</li>
+</ul>
+
+<h2>Class 3 (Random)</h2>
+<ul>
+  <li>Rules <a href="#30">30</a> and <a href="#86">86</a></li>
+  <li>Rules <a href="#60">60</a> and <a href="#102">102</a>: Leaning Sierpi&#324;ski</li>
+  <li>Rules <a href="#75">75</a> and <a href="#89">89</a></li>
+  <li><a href="#90">Rule 90</a>: Sierpi&#324;ski triangle</li>
+  <li><a href="#105">Rule 105</a></li>
+  <li><a href="#150">Rule 150</a></li>
+</ul>
+
+<h2>Class 4 (Complex)</h2>
+<ul>
+  <li>Rules <a href="#110">110</a> and <a href="#124">124</a></li>
+  <li>Rules <a href="#169">169</a> and <a href="#225">225</a></li>
+</ul>
+
+</div>
+
+<footer>by <a href="/">Cédric "tuzepoito" Chartron</a> - 2019.</footer>
+
+</body>
+</html>

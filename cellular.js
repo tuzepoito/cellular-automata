@@ -1,3 +1,7 @@
+// JavaScript implementation of 1-dimensional, 2-state cellular automata
+// (also known as "Elementary Cellular Automata")
+// author: Cédric "tuzepoito" Chartron
+
 var TABLE_WIDTH = 160;
 var TABLE_HEIGHT = 64;
 var CANVAS_SIZE = 4;
